@@ -6,6 +6,7 @@ import { FIREBASE_AUTH } from "./FirebaseConfig";
 import List from "./app/screens/List";
 import Details from "./app/screens/Details";
 import Login from "./app/screens/Login";
+import HouseholdTasks from "./app/screens/HouseholdTasks";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ const InsideStack = createNativeStackNavigator();
 function InsideLayout() {
   return (
     <InsideStack.Navigator>
+      <InsideStack.Screen name="Tâches Ménagères" component={HouseholdTasks} />
       <InsideStack.Screen name="Ma liste" component={List} />
       <InsideStack.Screen name="Détails" component={Details} />
     </InsideStack.Navigator>
